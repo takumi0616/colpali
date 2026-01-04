@@ -1,0 +1,29 @@
+name: colpali_env
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pip:
+      - --index-url https://download.pytorch.org/whl/cu121
+      - torch
+      - torchvision
+      - torchaudio
+      - transformers
+      - accelerate
+      - einops
+      - pillow
+      - tqdm
+      - pandas
+      - numpy
+      - matplotlib
+      - ipykernel  # VS CodeでJupyterを使うために必要
+
+# YAMLから環境を構築
+# conda env create -f ~/work_takasuka/takumi0616-colpali/work/colpali_env.yml
+
+# 作成されたか確認
+# conda env list
